@@ -5,40 +5,26 @@
     <meta name="viewport" content="width=divice-width, initial-scale=1.0">
     <meta name="discription" content="Это лучшие друзья сисадмина! Подборка инструментов!">
     <link rel="icon" href="./img/fav1.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Друзья сисадмина</title>
-    <style>
-        h3{
-            display: inline-block;
-        }
-        img {
-            height: 20px;
-            width: 20px;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        article p {
-            color: rgb(10, 4, 96);
-        }
-    </style>
-</head>
+
 
     <body>
         <header>
             <p>Сисадмин 2.0</p>
             <nav>
-                <li><a href="#1">PowerShell</a></li>
+                <li><a href="#ph">PowerShell</a></li>
                 <li><a href="#not">Notepad ++ </a></li>
-                <li><a href="#3">Keepass</a></li>
-                <li><a href="#4">Clonezilla </a></li>
+                <li><a href="#kp">Keepass</a></li>
+                <li><a href="#clon">Clonezilla </a></li>
                 <li><a href="#wire">Wireshark</a></li>
             </nav>
         </header>
         <main>
             <h1>Подборка инструментов для системных администраторов</h1>
-            <p>Есть множество инструментов, позволяющих облегчить жизнь сисадминам. Ниже привожу пример некоторых из них.</p>
+            <p class="opis">Есть множество инструментов, позволяющих облегчить жизнь сисадминам. Ниже привожу пример некоторых из них.</p>
             <section>
-               <article>
+               <article id="ph">
                 <h3> PowerShell</h3>
                 <img src="./img/ph.png">
                 <p>PowerShell — это кроссплатформенный решение для автоматизации задач который работает на Windows, Linux и macOS. Это оболочка командной строки и язык сценариев, разработанный специально для автоматизации администрирования операционной системы Windows и всех программ, функционирующих в экосистеме Windows, а также для упрощения настройки. </p>
@@ -50,13 +36,13 @@
                 <p>Notepad++ — бесплатный редактор исходного кода и замена Блокноту, работающая в среде MS Windows и использующая только Win32 API и СТЛ для обеспечения высокой скорости выполнения и меньшего размера программы.</p>
                 <a href="https://www.softportal.com/software-5406-notepad.html"><button>Подробнее</button></a>
                 </article> 
-               <article>
+               <article id="kp">
                 <h3>Keepass</h3>
                 <img src="./img/kp.png">
                 <p>В современном мире все защищено паролем, а это значит, что вам придется запоминать сотни паролей для различных веб-сайтов, серверов, учетных записей электронной почты и сетевых входов. На уровне предприятия, где одной из основных обязанностей системных администраторов является защита безопасности компании, Управление паролями оказывается решающим фактором. </p>
                 <a href="https://keepass.info/"><button>Подробнее</button></a>
                 </article> 
-               <article>
+               <article id="clon">
                 <h3>Clonezilla</h3>
                 <img src="./img/clon.png">
                 <p>Clonezilla — это инструмент клонирования дисков с открытым исходным кодом, который сохраняет и восстанавливает данные жесткого диска одного или нескольких компьютеров. Он известен своим развертыванием системы, резервным копированием на «голое железо» и восстановлением.</p>

@@ -1,0 +1,42 @@
+header p {
+    font-size: 20px;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    background-color: rgb(240, 240, 183);
+    padding: 20px;
+}
+nav li{
+    
+    width: 120px;
+    display: inline-block;
+    font-size: 21px;
+    background-color: black;
+    
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+    color: aliceblue;
+}
+h3{
+    display: inline-block;
+}
+img {
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+article p {
+    color: rgb(10, 4, 96);
+    font-size: 18px;
+}
+button {
+    background-color: rgb(57, 193, 227);
+}
+.opis {
+    font-size: 20px;
+}
