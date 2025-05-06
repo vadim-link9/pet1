@@ -1,0 +1,236 @@
+/* -------------------------------------------------------------------------- */
+/*  1. Общие стили (Reset, Body, Typography)                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Сброс стилей по умолчанию */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Основные стили для body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; /* Белый цвет текста */
+  background-color: #121212; /* Очень темный серый фон */
+}
+
+/* Стили для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #bb86fc; /* Фиолетовый цвет для заголовков */
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* Стили для ссылок */
+a {
+  color: #3700b3; /* Синий цвет для ссылок */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #bb86fc; /* Фиолетовый цвет при наведении */
+}
+
+/* Стили для списков */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  2. Header                                                                 */
+/* -------------------------------------------------------------------------- */
+
+header {
+  background-color: #1e1e1e; /* Темный серый фон */
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+header p { /* Заменил p на h1 */
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #bb86fc; /* Фиолетовый цвет для заголовка */
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  3. Navigation                                                              */
+/* -------------------------------------------------------------------------- */
+
+nav {
+  background-color: #272727; /* Еще более темный серый фон */
+  padding: 0.5em 0;
+}
+
+nav ul {
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+nav a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #fff;
+  background-color: #3700b3; /* Синий цвет для фона */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #bb86fc; /* Фиолетовый цвет при наведении */
+  color: #121212;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  4. Main                                                                   */
+/* -------------------------------------------------------------------------- */
+
+main {
+  padding: 2em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  5. Section                                                                */
+/* -------------------------------------------------------------------------- */
+
+section {
+  margin-bottom: 2em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  6. Article                                                                */
+/* -------------------------------------------------------------------------- */
+
+article {
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+article h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+article img {
+  width: 100px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 1em;
+  border-radius: 5px;
+}
+
+article p {
+  color: #ddd;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+article a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #3700b3;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+article a:hover {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  7. Footer                                                                  */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  8. Media Queries (Responsive Design)                                     */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* Стили для экранов меньше 768px */
+  header {
+    padding: 0.5em 0;
+  }
+
+  header p {
+    font-size: 1.5em;
+  }
+
+  nav li {
+    margin: 0 0.5em;
+  }
+
+  nav a {
+    padding: 0.3em 0.6em;
+    font-size: 0.9em;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  article {
+    padding: 0.5em;
+  }
+
+  article h3 {
+    font-size: 1.3em;
+  }
+
+  article img {
+    width: 80px;
+    margin-right: 0.5em;
+  }
+
+  article p {
+    font-size: 1em;
+  }
+}

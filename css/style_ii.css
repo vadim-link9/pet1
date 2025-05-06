@@ -1,0 +1,234 @@
+/* -------------------------------------------------------------------------- */
+/*  1. Общие стили (Reset, Body, Typography)                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Reset стили для сброса стандартных стилей браузеров */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Современный и читаемый шрифт */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* Темно-серый цвет текста */
+  background-color: #f8f8f8; /* Светло-серый фон */
+}
+
+/* Общие стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #007bff; /* Синий цвет ссылок */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+a:hover {
+  color: #0056b3; /* Более темный синий цвет при наведении */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  2. Header                                                                 */
+/* -------------------------------------------------------------------------- */
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+  text-align: center;
+}
+
+header p {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  3. Navigation                                                              */
+/* -------------------------------------------------------------------------- */
+
+nav {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block; /* Центрируем список */
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  display: block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  4. Main                                                                   */
+/* -------------------------------------------------------------------------- */
+
+main {
+  padding: 20px;
+  max-width: 960px; /* Ограничиваем ширину контента */
+  margin: 0 auto; /* Центрируем контент */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  5. Section                                                                */
+/* -------------------------------------------------------------------------- */
+
+section {
+  margin-bottom: 30px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  6. Article                                                                */
+/* -------------------------------------------------------------------------- */
+
+article {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd; /* Добавляем разделитель между статьями */
+  padding-bottom: 40px;
+}
+
+article:last-child {
+  border-bottom: none; /* Убираем разделитель у последней статьи */
+}
+
+article h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+article img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Круглые изображения */
+  object-fit: cover; /* Обрезаем изображения, чтобы они помещались в круг */
+  margin-right: 20px;
+  vertical-align: middle;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+}
+
+article p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #555;
+}
+
+article a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745; /* Зеленый цвет кнопки */
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+article a:hover {
+  background-color: #218838; /* Более темный зеленый цвет при наведении */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  7. Footer                                                                  */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  8. Media Queries (Responsive Design)                                     */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* Стили для экранов меньше 768px */
+  header {
+    padding: 10px;
+  }
+
+  header p {
+    font-size: 1.5em;
+  }
+
+  nav ul {
+    display: block; /* Выравниваем список по ширине экрана */
+  }
+
+  nav li {
+    display: block; /* Выравниваем элементы списка по ширине экрана */
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  article {
+    padding-bottom: 20px;
+  }
+
+  article img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+  article h3 {
+    font-size: 1.8em;
+  }
+
+  article p {
+    font-size: 1em;
+  }
+}

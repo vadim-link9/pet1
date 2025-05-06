@@ -1,0 +1,317 @@
+/* -------------------------------------------------------------------------- */
+/*  1. Общие стили (Reset, Body, Typography)                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Сброс стилей по умолчанию */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Основные стили для body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff; /* Белый цвет текста */
+  background-color: #121212; /* Очень темный серый фон */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+/* Стили для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #bb86fc; /* Фиолетовый цвет для заголовков */
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень для заголовков */
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/* Стили для ссылок */
+a {
+  color: #3700b3; /* Синий цвет для ссылок */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход цвета и тени */
+  position: relative; /* Для создания псевдоэлемента */
+}
+
+a::after {
+  content: ''; /* Создаем псевдоэлемент */
+  position: absolute;
+  bottom: -2px; /* Позиционируем его под ссылкой */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #bb86fc; /* Фиолетовый цвет для подчеркивания */
+  transform: scaleX(0); /* Скрываем подчеркивание */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: #bb86fc; /* Фиолетовый цвет при наведении */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень при наведении */
+}
+
+a:hover::after {
+  transform: scaleX(1); /* Показываем подчеркивание при наведении */
+  transform-origin: bottom left;
+}
+
+/* Стили для списков */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  2. Header                                                                 */
+/* -------------------------------------------------------------------------- */
+
+header {
+  background-color: #1e1e1e; /* Темный серый фон */
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 2px solid #333; /* Более толстая граница */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень для header */
+}
+
+header p { /* Заменил p на h1 */
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #bb86fc; /* Фиолетовый цвет для заголовка */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Более выраженная тень */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  3. Navigation                                                              */
+/* -------------------------------------------------------------------------- */
+
+nav {
+  background-color: #272727; /* Еще более темный серый фон */
+  padding: 0.5em 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень для navigation */
+}
+
+nav ul {
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+nav a {
+  display: block;
+  padding: 0.7em 1.2em;
+  color: #fff;
+  background-color: #3700b3; /* Синий цвет для фона */
+  border-radius: 7px; /* Более скругленные углы */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход и масштабирование */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Тень для кнопок */
+  position: relative; /* Для создания псевдоэлемента */
+  overflow: hidden; /* Скрываем псевдоэлемент */
+}
+
+nav a:hover {
+  background-color: #bb86fc; /* Фиолетовый цвет при наведении */
+  color: #121212;
+  transform: translateY(-3px); /* Небольшой сдвиг вверх при наведении */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Более выраженная тень при наведении */
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent); /* Градиент */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover::before {
+  opacity: 1; /* Показываем градиент при наведении */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  4. Main                                                                   */
+/* -------------------------------------------------------------------------- */
+
+main {
+  padding: 2em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  5. Section                                                                */
+/* -------------------------------------------------------------------------- */
+
+section {
+  margin-bottom: 2em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  6. Article                                                                */
+/* -------------------------------------------------------------------------- */
+
+article {
+  margin-bottom: 2em;
+  padding: 1.5em; /* Больше отступов */
+  border: 2px solid #333; /* Более толстая граница */
+  border-radius: 10px; /* Еще более скругленные углы */
+  background-color: #272727; /* Темный фон для article */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень для article */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход и тень */
+}
+
+article:hover {
+  transform: translateY(-5px); /* Небольшой сдвиг вверх при наведении */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7); /* Более выраженная тень при наведении */
+}
+
+article h3 {
+  font-size: 2em; /* Больший размер шрифта */
+  margin-bottom: 0.7em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Более выраженная тень */
+}
+
+article img {
+  width: 120px; /* Больший размер изображения */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 1.5em; /* Больший отступ */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для изображения */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход и тень */
+}
+
+article img:hover {
+  transform: scale(1.1); /* Небольшое увеличение при наведении */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Более выраженная тень при наведении */
+}
+
+article p {
+  color: #ddd;
+  font-size: 1.2em; /* Больший размер шрифта */
+  line-height: 1.7;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+article a {
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  background-color: #3700b3; /* Синий цвет для фона */
+  color: #fff;
+  border-radius: 7px; /* Более скругленные углы */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход, масштабирование и тень */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень для кнопок */
+}
+
+article a:hover {
+  background-color: #bb86fc; /* Фиолетовый цвет при наведении */
+  color: #121212;
+  transform: translateY(-3px); /* Небольшой сдвиг вверх при наведении */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7); /* Более выраженная тень при наведении */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  7. Footer                                                                  */
+/* -------------------------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 1.5em; /* Больше отступов */
+  background-color: #1e1e1e;
+  border-top: 2px solid #333; /* Более толстая граница */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Тень для footer */
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+  color: #888;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+/* -------------------------------------------------------------------------- */
+/*  8. Media Queries (Responsive Design)                                     */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* Стили для экранов меньше 768px */
+  header {
+    padding: 0.5em 0;
+  }
+
+  header p {
+    font-size: 1.5em;
+  }
+
+  nav li {
+    margin: 0 0.5em;
+  }
+
+  nav a {
+    padding: 0.3em 0.6em;
+    font-size: 0.9em;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  article {
+    padding: 1em;
+  }
+
+  article h3 {
+    font-size: 1.5em;
+  }
+
+  article img {
+    width: 100px;
+    margin-right: 1em;
+  }
+
+  article p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Стили для экранов меньше 576px */
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav li {
+    display: block;
+    margin: 0.5em 0;
+  }
+}
