@@ -36,6 +36,7 @@ h6 {
 }
 
 h1 {
+  text-align: center;
   font-size: 2.5em;
 }
 
@@ -58,7 +59,7 @@ a {
 a::after {
   content: ''; /* Создаем псевдоэлемент */
   position: absolute;
-  bottom: -2px; /* Позиционируем его под ссылкой */
+  bottom: -4px; /* Позиционируем его под ссылкой */
   left: 0;
   width: 100%;
   height: 2px;
@@ -166,6 +167,10 @@ nav a:hover::before {
 main {
   padding: 2em;
 }
+.opis{
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+}
 
 /* -------------------------------------------------------------------------- */
 /*  5. Section                                                                */
@@ -208,6 +213,7 @@ article img {
   border-radius: 10px; /* Скругленные углы */
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Тень для изображения */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход и тень */
+  margin-bottom: 0.5em;
 }
 
 article img:hover {
